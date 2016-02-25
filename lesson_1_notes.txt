@@ -1,0 +1,39 @@
+A user defined change set is called a Commit in Git
+When creating a commit a commit message must be supplied
+
+Version Control
+ -  Git
+ -  SVN (Second generation VCS like CVS)
+
+A commit is a snapshot of all the files in your repository when you choose to
+make the commit
+
+Windows version of git (includes git bash)
+https://git-for-windows.github.io/
+
+git clone <url>
+git log
+git diff <sub1> <sub2>
+
+git uses vim commands to scroll through logs
+
+j moves down
+k moves up
+q exits the current command
+
+You can tell that you are in command mode by the colon at the bottom left
+corner of the window.
+
+git log --stat
+Will show you the commits with the files that were touched and relative +-
+churn in the files.
+
+The commit you are currently on is called HEAD.
+
+git checkout <commit>
+Resetting all your files to the time the commit was made. sd sync @change
+
+On windows you use the fc command to do a file comparison.
+fc /n will display line numbers
+
+
