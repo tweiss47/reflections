@@ -23,3 +23,25 @@ before any changes are made to the repository
 git add
  -  Adds files from the working directory to the staging area
 
+git commit
+ -  Commits changes from the staging area to the (local) repository
+ -  Commit message required. Add on command line with -m or use local editor.
+    May want to change this to gvim.
+
+?? Can you set a commit message before you commit (ie to staging) ??
+
+Udacity Git Commit Message Style Guide
+http://udacity.github.io/git-styleguide/
+
+Differencing changes in working directory and staging.
+
+git diff
+ -  No arguments will diff between the working directory (WD) and Staging
+
+git diff --staged
+ -  Diff between staging area and repository (currently checked out commit -
+    ?)
+
+git reset --hard
+ -  Forcably discard any changes in Staging and WD
+
