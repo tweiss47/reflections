@@ -45,3 +45,24 @@ git diff --staged
 git reset --hard
  -  Forcably discard any changes in Staging and WD
 
+How can you use the staging area to make sure you have one commit per logical change?
+
+The staging area alows you to select specific files that should be part of the
+commit and leave other changes behind.
+
+Branches
+
+Branches are a label that you can assign to a commit.
+
+git branch <branch-name>
+ -  create a branch
+
+git checkout <branch-name>
+ -  Switch onto branch-name
+ -  Subsequent commits will happen on branch-name and will move the label to
+    the latest commit in that branch
+
+master is the default branch name created by git when a repo is created
+
+Create a branch whenever you start a new work item
+
