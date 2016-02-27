@@ -66,3 +66,32 @@ master is the default branch name created by git when a repo is created
 
 Create a branch whenever you start a new work item
 
+How do the diagrams help you visualize the branch structure?
+ -  commits link to a parent commit
+ -  commits my be unreachable if a branch name is not on their same line
+
+git checkout -b <new-branch-name>
+ => equivalent to:
+    git branch <new-branch-name>
+    git checkout <new-branch-name>
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+The result is a single branch (the to branch) with a shared commit history
+from both of the branches. Both branches converge into a single logical
+branch.
+
+git merge <branch-to> <branch-from>
+ -  merges <branch-from> => <branch-to>
+ -  also
+    git checkout <branch-to>
+    git merge <branch-from>
+
+get branch -d <branch-from>
+ -  Removes the <branch-from> label
+ -  All of <branch-from>'s commits are accessible from <branch-to>
+
+merge conflicts
+ -  git merge --abort
+     => discard a pending merge that has failed
