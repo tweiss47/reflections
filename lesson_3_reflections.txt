@@ -1,1 +1,56 @@
 Lesson 3 Reflections
+
+When would you want to use a remote repository rather than keeping all your
+work local?
+
+Any time you were collaborating with others or when you needed to access your
+repo from another system. A remote repository also allows you to backup your
+repo.
+
+git remote -v
+ -  Displays the remote repo connected to your local repository
+
+git remote add origin <url>
+ -  Connects your local repo to a remote repository
+
+git push origin master
+ -  Push local commits in the local master branch to the remote repo
+
+git pull origin master
+ -  Pull remote commits to the local repo
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+Pulling changes can disrupt your local repo by injecting new code that you are
+not ready to integrate.
+
+Describe the differences between forks, clones, and branches. When would you
+use one instead of another?
+
+A fork is a GitHub term for a remote clone. It only exists on the GitHub
+servers. Used to make a copy of a repo that you want to make changes to, but
+that you don't have the desire or permission to modify. A clone is a copy of a
+repo. It can be a local clone of a remote repo. Or a local copy of a local
+repo. Used to make a working copy. A branch is a labeled history of commits
+that diverges from a parent line of commits. Used for new work.
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+The local branch origin/master allows git status to report on local changes
+and allows a common ancestor for pulls. Any changes to the remote repo are
+relative to origin/master and so local changes have a logical base to be
+merged when pulling from the remote.
+
+When would you want to make changes in a separate branch rather than directly
+in master? What benefits does each approach have?
+
+Working in just master is a simpler model. It allows you just to push and pull
+changes directly. Using a branch allows you to context switch and handle
+multiple changes concurrently. It also gives you control over when and how you
+integrate changes from master. And allows you to share changes out for review
+or testing without interfering with the master branch.
+
+
+
